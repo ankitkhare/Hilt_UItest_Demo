@@ -3,7 +3,6 @@ import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
 fun BaseAppModuleExtension.setAppConfig() {
     compileSdkVersion(ProjectConfiguration.COMPILE_SDK)
     buildToolsVersion(ProjectConfiguration.BUILD_TOOLS_VERSION)
-    useLibrary("org.apache.http.legacy")
 
     defaultConfig {
         minSdkVersion(ProjectConfiguration.MIN_SDK)
@@ -27,12 +26,5 @@ fun BaseAppModuleExtension.setAppConfig() {
 
     lintOptions {
         isAbortOnError = false
-    }
-
-    //supported architectures for abi / Android App Bundle
-    bundle {
-        language {
-            enableSplit = false
-        }
     }
 }
